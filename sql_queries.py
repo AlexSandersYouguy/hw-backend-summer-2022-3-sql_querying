@@ -34,7 +34,7 @@ TASK_2_QUERY = """
     HAVING 
         COUNT(*) < 50
     ORDER BY 
-        count DESC, flight_no
+        count DESC
     LIMIT 3;
 """
 #  flight_no | count
