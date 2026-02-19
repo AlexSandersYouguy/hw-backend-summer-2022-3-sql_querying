@@ -28,7 +28,7 @@ jobs:
         run: echo "PROJECTPATH=/home/runner/work/hw-backend-summer-2022-3-sql_querying/hw-backend-summer-2022-3-sql_querying" >> $GITHUB_ENV
 
       - name: import db
-        run:  export PGPASSWORD="$POSTGRES_PASSWORD"; psql --host="$POSTGRES_HOST" --port="$POSTGRES_PORT" --username="$POSTGRES_USER" --d="$POSTGRES_DATABASE" < "$PROJECTPATH/tests/data/demo.sql"
+        run:  export PGPASSWORD="$POSTGRES_PASSWORD"; psql --host="$POSTGRES_HOST" --port="$POSTGRES_PORT" --username="$POSTGRES_USER" --d="$POSTGRES_DATABASE" < ./tests/data/demo.sql
         env:
           POSTGRES_HOST: localhost
           POSTGRES_PORT: 5432
